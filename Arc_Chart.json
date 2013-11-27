@@ -1,0 +1,137 @@
+{
+  "name": "arc",
+  "width": 400,
+  "height": 400,
+  "data": [
+    {
+      "name": "table",
+      "values": [
+        244.85, 50.74, 2.95, 1.25, 44.04, 116.34 
+      ],
+      "transform": [
+        {
+          "type": "pie",
+          "sort": true,
+          "value": "data"
+        },
+        {
+          "type": "formula",
+          "field": "hyp",
+          "expr": "60"
+        },
+        {
+          "type": "formula",
+          "field": "theta",
+          "expr": "d.startAngle + 0.5 *(d.endAngle - d.startAngle) - 1.57079633"
+        },
+        {
+          "type": "formula",
+          "field": "x_mid",
+          "expr": "200"
+        },
+        {
+          "type": "formula",
+          "field": "y_mid",
+          "expr": "200"
+        },
+        {
+          "type": "formula",
+          "field": "x",
+          "expr": "d.x_mid + (d.hyp * Math.cos(d.theta))"
+        },
+        {
+          "type": "formula",
+          "field": "y",
+          "expr": "d.y_mid + (d.hyp * Math.sin(d.theta))"
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "r",
+      "type": "sqrt",
+      "domain": {
+        "data": "table",
+        "field": "data"
+      },
+      "range": [
+        20,
+        100
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "arc",
+      "from": {
+        "data": "table"
+      },
+      "properties": {
+        "enter": {
+          "x": {
+            "group": "width",
+            "mult": 0.5
+          },
+          "y": {
+            "group": "height",
+            "mult": 0.5
+          },
+          "startAngle": {
+            "field": "startAngle"
+          },
+          "endAngle": {
+            "field": "endAngle"
+          },
+          "innerRadius": {
+            "value": 20
+          },
+          "outerRadius": {
+            "scale": "r"
+          },
+          "stroke": {
+            "value": "#fff"
+          }
+        },
+        "update": {
+          "fill": {
+            "value": "pink"
+          }
+        },
+        "hover": {
+          "fill": {
+            "value": "#ccc"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "table"
+      },
+      "properties": {
+        "enter": {
+          "y": {
+            "field": "y"
+          },
+          "x": {
+            "field": "x"
+          },
+          "fill": {
+            "value": "black"
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "text": {
+            "field": "data"
+          }
+        }
+      }
+    }
+  ]
+}

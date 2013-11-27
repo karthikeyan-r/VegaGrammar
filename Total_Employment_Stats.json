@@ -1,0 +1,20 @@
+[
+	{"sectors":"Agriculture", "year":2000, "value":238.67},
+	{"secotrs":"Agriculture", "year":2005, "value":258.93},
+	{"secotrs":"Agriculture", "year":2010, "value":244.85},
+	{"secotrs":"Manufacturing", "year":2000, "value":44.05},
+	{"secotrs":"Manufacturing", "year":2005, "value":55.77},
+	{"secotrs":"Manufacturing", "year":2010, "value":50.74},
+	{"secotrs":"Mining", "year":2000, "value":1.13},
+	{"secotrs":"Mining", "year":2005, "value":1.30},
+	{"secotrs":"Mining", "year":2010, "value":1.25},
+	{"secotrs":"Electricity, Gas & Water Supply", "year":2000, "value":17.54},
+	{"secotrs":"Electricity, Gas & Water Supply", "year":2005, "value":26.02},
+	{"secotrs":"Electricity, Gas & Water Supply", "year":2010, "value":44.04},
+	{"secotrs":"Construction", "year":2000, "value":94.20},
+	{"secotrs":"Construction", "year":2005, "value":112.81},
+	{"secotrs":"Construction", "year":2010, "value":116.34},
+	{"secotrs":"Services", "year":2000, "value":396.76},
+	{"secotrs":"Services", "year":2005, "value":457.46},
+	{"secotrs":"Services", "year":2010, "value":460.22}
+]
